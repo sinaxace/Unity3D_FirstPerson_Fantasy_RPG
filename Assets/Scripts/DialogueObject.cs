@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     {
         public string[] dialogues; // this array contains the dialogue content
         public string characterName;
-        public int questNumber;
+        //public int questNumber;
     }
 
     public class DialogueObject : MonoBehaviour
@@ -41,6 +41,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public RigidbodyFirstPersonController rigid;
 
+        private QuestObject obj;
+
         // here we are going to enable and disable the dialogue objects from the canvas and control the dialog flow.
         public PlayerData data;
 
@@ -48,6 +50,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //data = FindObjectOfType<PlayerData>();
             //dialogueText = FindObjectOfType<TextMeshProUGUI>().GetComponent()
+        }
+        // when the game starts pretty much
+        private void Awake()
+        {
+            obj = FindObjectOfType<QuestObject>();
         }
 
         private void OnEnable()
@@ -89,6 +96,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     case 1:
                         npc1.hasTalked = true; // when quest dialogue number is 1, the npc has been talked to.
                         npc1.isInDialogue = false;
+                        obj.StartNewQuest(obj.questObjs[0]);
                         break;
                     case 1.5f:
                         npc1.isInDialogue = false;
@@ -98,7 +106,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 data.dialogueNumber = 0;
                 currentDialogueNumber = 0;
-                data.questNumber = curDialogue.questNumber;
+                //data.questNumber = curDialogue.questNumber;
                 curDialogue = null;
                 this.gameObject.SetActive(false);
                 dialogueText.text = tempObj.dialogues[0];
