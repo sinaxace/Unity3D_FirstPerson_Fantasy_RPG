@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 // code typed from this tutorial: https://youtu.be/oRPNWBvfsQk?list=PLE70FML1U9svBs9GBdhvesMkd0GuprFho
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -13,6 +14,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public RigidbodyFirstPersonController rigid;
         public bool hasTalked = false; // to save whether we talked to NPC or not.
         public bool isInDialogue = false;
+        public string npcName;
 
         // we're using this method to setup a trigger to stop and talk with the NPC when pressing E.
         // This is considered a key event method in unity.
@@ -20,7 +22,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (other.gameObject.tag == "Player" && !isInDialogue)
             {
-                triggerText.SetActive(true); 
+                triggerText.SetActive(true);
+                triggerText.GetComponent<TextMeshProUGUI>().text = "Press E to talk to "+npcName;
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     isInDialogue = true;
