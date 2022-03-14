@@ -21,7 +21,6 @@ public class PlayerData : MonoBehaviour
     public TextMeshProUGUI healthText; // for displaying the actual health amount.
 
     public ObjectData[] HotBar;
-
     public Image[] HotbarSlots;
     public Image[] BackgroundSlots;
 
@@ -32,6 +31,12 @@ public class PlayerData : MonoBehaviour
 
     [Header("UIComponents")]
     public Slider healthSlider;
+
+    [HideInInspector]
+    public bool isDragged;
+    public int moveToSlot;
+    public ObjectData data;
+    public int parentItem;
 
     // to highlight the equipped item in the hotbar
     public void EquipHotbar()
@@ -49,11 +54,11 @@ public class PlayerData : MonoBehaviour
                     BackgroundSlots[currentEquipped + 1].color = normalColor; // for making the slot to the right normal
                 } else if (currentEquipped == 0)
                 {
-                    Debug.Log("Reached the beginning");
+                    //Debug.Log("Reached the beginning");
                     BackgroundSlots[BackgroundSlots.Length - 1].color = normalColor; 
                 } else if (currentEquipped == BackgroundSlots.Length-1)
                 {
-                    Debug.Log("Reached the beginning");
+                    //Debug.Log("Reached the beginning");
                     BackgroundSlots[0].color = normalColor;
                 }
                 break;
@@ -137,5 +142,29 @@ public class PlayerData : MonoBehaviour
         }
         healthSlider.value = currentHealth;
         healthText.text = currentHealth.ToString("F0") + "/" + maxHealth.ToString("F0"); // note that F0 eliminates decimals
+    }
+
+    // for dragging a hotbar item
+    public void DragItem(int indexNum, ObjectData passingObj)
+    {
+        // here we are making the item icon follow the cursor.
+        isDragged = true;
+        moveToSlot = indexNum;
+        HotBar[indexNum] = null;
+        parentItem = indexNum;
+        data = passingObj;
+        ReloadHotbar();
+    }
+
+    public void ReleaseItem()
+    {
+        isDragged = false;
+        HotBar[moveToSlot] = data;
+        ReloadHotbar();
+    }
+
+    public void ChangeSlots(int indexNum)
+    {
+        moveToSlot = indexNum;
     }
 }

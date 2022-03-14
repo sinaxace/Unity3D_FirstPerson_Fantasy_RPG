@@ -36,6 +36,7 @@ public class GroundItem : MonoBehaviour
                 if (data.HotBar[i] == null)
                 {
                     data.HotBar[i] = pickupItem;
+                    data.HotbarSlots[i].gameObject.GetComponent<Slot>().objData = pickupItem;
                     triggerText.gameObject.SetActive(false);
                     Destroy(parent, 0.1f); // Note that you can't just destroy a game component but the game object itself.
                     isPickedUp = true;
