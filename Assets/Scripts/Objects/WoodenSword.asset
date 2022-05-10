@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: WoodenSword
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 258ae5f357c016b429719c2969f95077, type: 3}
+  weaponPrefab: {fileID: 3292732795350749371, guid: e3f69297bf46ecb4295533e9d2e99f98, type: 3}

@@ -212,6 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &60679541
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +407,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!4 &124218879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 455772, guid: f110c542cb124a045a69faf5b0b218c4, type: 3}
@@ -660,7 +664,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 12
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &190651480
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +756,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &234797545
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +923,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &247049711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 10
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &254266008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1184,10 @@ PrefabInstance:
     - target: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_RootOrder
@@ -1324,6 +1340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 4
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &292816645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &304358063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 2
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &314525380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 11
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!4 &396114746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467906, guid: b266f4e4ee23ffc45b9b5f47b06e3a89, type: 3}
@@ -2251,7 +2275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 3
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &461136321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,7 +2366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 13
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &477746754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 7
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &587839163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,7 +2863,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 5
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &621073166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,6 +2955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 8
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1001 &624321556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4027,7 +4061,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 2
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &767936169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,7 +4152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 1
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &771284098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,6 +4490,40 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Inventory:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  InventorySlots:
+  - {fileID: 190651482}
+  - {fileID: 767936171}
+  - {fileID: 758935866}
+  - {fileID: 459831746}
+  - {fileID: 1687581475}
+  - {fileID: 615498389}
+  - {fileID: 1103916988}
+  - {fileID: 1811833964}
+  - {fileID: 1502017691}
+  - {fileID: 1050988090}
+  - {fileID: 251170136}
+  - {fileID: 385253773}
+  - {fileID: 156831242}
+  - {fileID: 461136323}
+  - {fileID: 1522024552}
+  - {fileID: 945204330}
   HotbarSlots:
   - {fileID: 1915450831}
   - {fileID: 1320650971}
@@ -4476,6 +4548,13 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 0.39215687}
   currentEquipped: 0
   healthSlider: {fileID: 1479475887}
+  isDragged: 0
+  moveToSlot: 0
+  itemData: {fileID: 0}
+  isInInventory: 0
+  DraggingSprite: {fileID: 5380540421250335701, guid: f603b87d199ea614c9136ec33b222472, type: 3}
+  Canvas: {fileID: 783026905}
+  cameraObj: {fileID: 2068335534}
 --- !u!114 &867225628 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
@@ -4698,7 +4777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 15
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!4 &965862575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030779292026969653, guid: e34910cb9fa6de8499f869a00f3e1351, type: 3}
@@ -5011,7 +5092,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 9
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &1054017357
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,7 +5428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 6
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1001 &1117510991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5497,6 +5582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!4 &1137212160 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3780244799274528415, guid: c26024a50950406448a6a3f1eced983d, type: 3}
@@ -6150,6 +6237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 1
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1001 &1349554039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6907,7 +6996,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 8
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &1522024550
 GameObject:
   m_ObjectHideFlags: 0
@@ -6996,7 +7087,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 14
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &1524918450
 GameObject:
   m_ObjectHideFlags: 0
@@ -7538,6 +7631,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 3
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!4 &1643211719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8596083863946125858, guid: 58446fb6ad3448848a8e6ee0c4ed021d, type: 3}
@@ -7711,7 +7806,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 4
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1001 &1696589350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8358,6 +8455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 5
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &1811833962
 GameObject:
   m_ObjectHideFlags: 0
@@ -8446,7 +8545,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19066a8a5d46645a90955dc21fbe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotNumber: 0
+  slotNumber: 7
+  objData: {fileID: 0}
+  isInventory: 1
 --- !u!1 &1859801231
 GameObject:
   m_ObjectHideFlags: 0
@@ -8710,6 +8811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &1911046949
 GameObject:
   m_ObjectHideFlags: 0
@@ -8875,6 +8978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &1920535995
 GameObject:
   m_ObjectHideFlags: 0
@@ -9132,6 +9237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 6
+  objData: {fileID: 0}
+  isInventory: 0
 --- !u!1 &2009352616
 GameObject:
   m_ObjectHideFlags: 0
@@ -9690,6 +9797,18 @@ PrefabInstance:
     - target: {fileID: 2479158794256474051, guid: bae37a9953f906c499976106cabc48d6, type: 3}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479158794256474051, guid: bae37a9953f906c499976106cabc48d6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479158794256474051, guid: bae37a9953f906c499976106cabc48d6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479158794256474051, guid: bae37a9953f906c499976106cabc48d6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 2479158794256474051, guid: bae37a9953f906c499976106cabc48d6, type: 3}
       propertyPath: m_LocalPosition.x

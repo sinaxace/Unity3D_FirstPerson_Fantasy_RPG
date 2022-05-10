@@ -10,6 +10,13 @@ public class UIManager : MonoBehaviour
 
     public GameObject InventorySystem;
 
+    private PlayerData data;
+
+    private void Start()
+    {
+        data = FindObjectOfType<PlayerData>();
+    }
+
     private void Update()
     {
         if (DialogueObj.activeSelf)
@@ -29,8 +36,10 @@ public class UIManager : MonoBehaviour
             } else
             {
                 Time.timeScale = 1; // stop time when pressing tab
-                Cursor.visible = true;
+                Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked; // make it so we can't move our mouse when pressing tab
+                if(data.isDragged)
+                    data.DragItem(data.moveToSlot, data.itemData, data.isInInventory); 
             }
 
         }
