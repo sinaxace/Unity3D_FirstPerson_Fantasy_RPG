@@ -19,36 +19,43 @@ public class GroundItem : MonoBehaviour
     private void Start()
     {
         data = FindObjectOfType<PlayerData>();
+        //triggerText = GameObject.FindGameObjectWithTag("TriggerText").GetComponent<TextMeshProUGUI>(); // this doesn't work as well as the next line]
+        triggerText = data.triggerText;
         isPickedUp = false;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (!isPickedUp)
+        if (other.tag == "Player")
         {
-            triggerText.gameObject.SetActive(true);
-        }
-        triggerText.text = "Press E to Pick Up " + name;
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            for (int i = 0; i < data.HotBar.Length; i++)
+            if (!isPickedUp)
             {
-                if (data.HotBar[i] == null)
-                {
-                    data.HotBar[i] = pickupItem;
-                    data.HotbarSlots[i].gameObject.GetComponent<Slot>().objData = pickupItem;
-                    triggerText.gameObject.SetActive(false);
-                    Destroy(parent, 0.1f); // Note that you can't just destroy a game component but the game object itself.
-                    isPickedUp = true;
-                    i = data.HotBar.Length + 1;
-                }
+                triggerText.gameObject.SetActive(true);
             }
-            data.ReloadHotbar(); 
+            triggerText.text = "Press E to Pick Up " + name;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                for (int i = 0; i < data.HotBar.Length; i++)
+                {
+                    if (data.HotBar[i] == null)
+                    {
+                        data.HotBar[i] = pickupItem;
+                        data.HotbarSlots[i].gameObject.GetComponent<Slot>().objData = pickupItem;
+                        triggerText.gameObject.SetActive(false);
+                        Destroy(parent, 0.1f); // Note that you can't just destroy a game component but the game object itself.
+                        isPickedUp = true;
+                        data.EquipHotbar();
+                        i = data.HotBar.Length + 1;
+                    }
+                }
+                data.ReloadHotbar();
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        triggerText.gameObject.SetActive(false);
+        if(other.tag == "Player")
+            triggerText.gameObject.SetActive(false);
     }
 }

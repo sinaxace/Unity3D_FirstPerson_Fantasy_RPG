@@ -8,4 +8,5 @@ public class ObjectData : ScriptableObject
 {
     public Sprite sprite;
     public GameObject weaponPrefab;
+    public GameObject groundItem;
 }

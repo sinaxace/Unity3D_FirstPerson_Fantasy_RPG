@@ -8,7 +8,7 @@ using TMPro;
 // code typed from this tutorial: https://youtu.be/oRPNWBvfsQk?list=PLE70FML1U9svBs9GBdhvesMkd0GuprFho
 
 
-// TODO: Currently at 23 minutes into part 11 of equipping items. Just finished equipping the dagger prefab.
+// TODO: Start part 12 of Unity RPG tutorial after having finished equipping items.
 
 /// <summary>
 /// PlayerData script contains code pertaining to the player
@@ -62,6 +62,11 @@ public class PlayerData : MonoBehaviour
 
     private GameObject CurrentEquipped;
 
+    public Transform dropArea;
+
+    public TextMeshProUGUI triggerText;
+
+
     // to highlight the equipped item in the hotbar
     public void EquipHotbar()
     {
@@ -75,12 +80,13 @@ public class PlayerData : MonoBehaviour
                 // here is for actually equipping the sword prefab
                 if (HotBar[i] != null)
                 {
+                    Destroy(CurrentEquipped); // to delete previously equipped item
 
                     CurrentEquipped = Instantiate(HotBar[i].weaponPrefab, transform.position, transform.rotation); // instantiating the new sword to a random position
                     CurrentEquipped.transform.SetParent(cameraObj.transform); // setting it's parent as the player's camera
 
                     CurrentEquipped.transform.localPosition = HotBar[i].weaponPrefab.transform.position; //  and then making the position relative to that weapon prefab's position we adjusted with the dagger.
-                    CurrentEquipped.transform.rotation = HotBar[i].weaponPrefab.transform.rotation;
+                    CurrentEquipped.transform.localRotation = HotBar[i].weaponPrefab.transform.rotation;
                 } else
                 {
                     // if there is nothing in the current hotbar slot equipped
@@ -169,6 +175,17 @@ public class PlayerData : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            if (HotBar[currentEquipped] != null)
+            {
+                Instantiate(HotBar[currentEquipped].groundItem, dropArea.position, dropArea.rotation);
+                HotBar[currentEquipped] = null;
+                ReloadHotbar();
+                EquipHotbar();
+            }
+        }
+
         if (TempDragObj != null)
         {
             TempDragObj.transform.position = Vector2.Lerp(TempDragObj.transform.position, Input.mousePosition, 1f);
@@ -177,6 +194,9 @@ public class PlayerData : MonoBehaviour
 
     public void Start()
     {
+        // set the trigger text as false after 1 second.
+        // Invoke("SetAsFalse", 1); // note that this did not work since everytime we invoke this to set trigger text to false, we still need to find it later on.
+
 //        Debug.Log("Hotbar Length: " + HotBar.Length);
         healthSlider.maxValue = maxHealth;
         currentHealth = maxHealth;
@@ -186,6 +206,11 @@ public class PlayerData : MonoBehaviour
         EquipHotbar();
     }
 
+    /*private void SetAsFalse()
+    {
+        triggerText.SetActive(false);
+    }
+*/
     /// <summary>
     /// This will be called during the SkeletonAI coroutine every 1.2 seconds to decrease the player health based on the damage taken.
     /// </summary>
